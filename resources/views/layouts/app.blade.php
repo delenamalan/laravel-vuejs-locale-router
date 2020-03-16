@@ -6,6 +6,9 @@
 
         <title>Locale home</title>
 
+        <script>
+            window._locale = "{{ $locale }}";
+        </script> 
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body>

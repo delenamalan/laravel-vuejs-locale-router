@@ -52601,12 +52601,12 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-console.log("Hello!");
+console.log("Locale: " + window._locale);
 var app = new Vue({
   el: '#app',
   router: new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     mode: 'history',
-    base: '/en/',
+    base: "/".concat(window._locale, "/"),
     routes: _routes__WEBPACK_IMPORTED_MODULE_0__["default"]
   })
 });

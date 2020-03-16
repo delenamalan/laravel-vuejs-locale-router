@@ -32,13 +32,13 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
- console.log("Hello!")
+console.log("Locale: " + window._locale);
 
 const app = new Vue({
     el: '#app',
     router: new VueRouter({
       mode: 'history',
-      base: '/en/',
+      base: `/${window._locale}/`,
       routes
     })
 });
