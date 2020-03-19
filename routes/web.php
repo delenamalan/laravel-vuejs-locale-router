@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}']],
     function () {
         Route::get('/{path?}', function($locale) {
-            return view('layouts.app', ['locale' => $locale]);
+            App::setLocale($locale);
+            return view('layouts.app');
         })
         ->where('path', '.*');
     }

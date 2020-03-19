@@ -7,13 +7,12 @@
         <title>Locale home</title>
 
         <script>
-            window._locale = "{{ $locale }}";
+            window._locale = "{{ app()->getLocale() }}";
         </script> 
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <h1>Locale: {{ $locale }}</h1>
             <div id="app">
                 <h2>router-view</h2>
                 <router-view></router-view>
